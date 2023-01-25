@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('users_channels', function (Blueprint $table) {
             $table->unique(['user_id', 'channel_id']);
 
-            $table->id();
+            $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id')->nullable(false);
             $table->unsignedBigInteger('channel_id')->nullable(false);
             $table->timestamps();
